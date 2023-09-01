@@ -5,13 +5,13 @@ import openpyxl
 workbook=openpyxl.Workbook()
 new_sheet= workbook.create_sheet(title="newsheet.xlsx")
 
-file=open("headerfile.txt.txt","r")
+file=open("/home/salma/Documents/EmbeddedLinux/Embedded-Linux/Python/headerfile.txt","r")
 
 startvalue="IDX00"
 i=1
 for x in file:
     new_sheet.cell(row=i, column=1).value = x
-    new_sheet.cell(row=i, column=2).value = startvalue+i
+    new_sheet.cell(row=i, column=2).value = startvalue+str(i)
     i=i+1
 	
 workbook.save("newsheet.xlsx")
