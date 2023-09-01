@@ -1,0 +1,3 @@
+void_init();
+void_running();
+void_getter();
