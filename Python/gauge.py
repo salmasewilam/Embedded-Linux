@@ -1,0 +1,25 @@
+from tkinter import *
+
+y=Tk()
+y.geometry("500x500")
+Label(y,text="Humidity",font="bold").pack()
+c= Canvas(width = 430, height = 300, bg = "white")
+c.pack()
+coord = 10,50,420, 420
+c.create_arc(coord,start=30,extent =40,outline="red",fill ="red", width=2)
+c.create_arc(coord,start=50,extent =30,outline="yellow",fill ="yellow", width=2)
+c.create_arc(coord,start=70,extent =80,outline="green",fill ="green", width=2)
+coord = 10,100,420, 420
+c.create_arc(coord,start=30,extent =110,outline="white",fill ="white", width=2)
+c.create_line(225,250,50,150,fill="black", width=1)
+c.create_line(225,250,100,125, fill="black", width=1)
+c.create_line(225,250,150,105, fill="black", width=1)
+c.create_line(225,250,200,96, fill="black", width=5)
+c.create_line(225,250,250,100, fill="black", width=1)
+c.create_line(225,250,300,110, fill="black", width=1)
+c.create_line(225,250,350,135, fill="black", width=1)
+c.create_line(225,250,390,145, fill="black", width=1)
+c.create_text(200, 250, text="30%", fill="black")
+c.create_text(30, 150, text="0%", fill="black")
+c.create_text(410, 150, text="100%", fill="black")
+y.mainloop()
