@@ -1,0 +1,9 @@
+import requests
+
+ip = requests.get("https://api.ipify.org/?format=json").json()
+print (ip)
+url="https://ipinfo.io/<YOUR_IP>/geo"
+url2=str(url)
+url3=url2.replace("<YOUR_IP>",ip["ip"])
+location = requests.get(url3).json()
+print (location)
