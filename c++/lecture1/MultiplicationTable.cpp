@@ -7,13 +7,13 @@ void multiply(int x)
     std::cout <<"---------------------------\n";
     for (int i=1;i<13;i++)
     {
-        std::cout <<"|   "<<i<<"x"<<x <<"  |"<<" = "<<i*x<<"   |\n";
+        std::cout<<i<<"*"<<x<<" = "<<i*x<<"\n";
     }
 }
 int main()
 {
     int x;
-    std:: cout<<"enter the number";
+    std:: cout<<"enter the number"<<std::endl;
     std::cin>>x;
     multiply(x);
     
