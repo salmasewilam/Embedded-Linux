@@ -1,3 +1,5 @@
+//Use lambda functions to sort an array of integers in ascending and descending order
+
 #include <algorithm>
 #include <iostream>
 
