@@ -1,3 +1,6 @@
+//3- fill array from 10 to 10000 sequentially
+//5- calculate accumulate of array
+#include <algorithm>
 #include <iostream>
 #include <ostream>
 #include <array>
@@ -15,14 +18,14 @@ long accumulate_array(int arr[],int size)
 }
 
 int main(){
-int arr[100];
-fill_array(arr,100,1);
-for (int i=0;i<100;i++)
+int arr[91];
+fill_array(arr,91,10);
+for (int i=0;i<91;i++)
 {
     std::cout<<arr[i]<<"\n";
 }
 long sum;
-sum=accumulate_array(arr,100);
+sum=accumulate_array(arr,91);
 std::cout<<sum<<"\n";
 
 return 0;

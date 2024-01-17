@@ -1,41 +1,29 @@
+//check if all the array is even
+#include <algorithm>
 #include <iostream>
 #include <ostream>
 
-int Array_is_even(int arr[],int size){
-    int flag=1;
-    for (int i=0;i<size;i++)
-    {
-        if (arr[i]%2==0)
-        {
-            continue;
-        }
-        else{
-            flag=0;
-            break;
-        }
-    }
-return flag;
-} 
-int Element_is_even(int arr[],int size){
+void Array_is_even(int arr[],int size){
     int flag=0;
-    for (int i=0;i<size;i++)
+    flag=std::all_of(arr,arr+size,[](int i){return !(i%2);});
+    if (flag==1)
+    std::cout<<"The array is even"<<std::endl;
+    else
     {
-        if (arr[i]%2==0)
-        {
-            flag=1;
-            break;
-        }
-        else{
-            continue;
-        }
+    std::cout<<"the array is not even"<<std::endl;
     }
-return flag;
+
+} 
+void Element_is_even(int arr[],int size){
+    int flag=0;
+    flag=std::any_of(arr,arr+size,[](int i){return !(i%2);});
+    if (flag==1) std::cout<<"There is an even element\n";
+    else std::cout<<"There is not an even element\n";
 } 
 int main(){
-int arr[]={1,3,3,41,51,63,77};
+int arr[]={3,3,5};
 int size=sizeof(arr)/sizeof(arr[0]);
-int flag=Element_is_even(arr,size);
-if (flag==1) std::cout<<"There is an even element\n";
-else std::cout<<"There is not an even element\n";
+Array_is_even(arr,size);
+Element_is_even(arr,size);
 return 0;
 }

@@ -1,15 +1,16 @@
+//check if the character is digit
+#include <cctype>
 #include <iostream>
 #include <ostream>
 
-int check_char(char x){
-    if (x>='0' and x<='9'){
-    std::cout<<"DIGTI\n";
-    return 1;
-    }
-    std::cout<<"NOT DIGTI\n";
-    return 0;
-} 
 int main(){
-check_char('x');
+char ch;
+std::cout<<"please enter the character"<<std::endl;
+std::cin>>ch;
+if (std::isdigit(ch))
+{std::cout<<"The char is DIGIT"<<std::endl;}
+else {
+std::cout<<"The char NOT digit"<<std::endl;
+}
 return 0;
 }
